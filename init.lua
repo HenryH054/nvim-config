@@ -547,8 +547,9 @@ local servers = {
   clangd = {},
   -- gopls = {},
   pylsp = {},
+  arduino_language_server = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   r_language_server = { filetyoes = { 'R' } },
   lua_ls = {
