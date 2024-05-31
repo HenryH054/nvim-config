@@ -552,6 +552,7 @@ local servers = {
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
   r_language_server = { filetyoes = { 'R' } },
+  cssls = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
