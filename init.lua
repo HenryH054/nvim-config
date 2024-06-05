@@ -545,6 +545,7 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
+  jdtls = {},
   -- gopls = {},
   pylsp = {},
   arduino_language_server = {},
