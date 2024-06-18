@@ -22,7 +22,7 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
-
+vim.lsp.set_log_level("trace")
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
@@ -72,7 +72,6 @@ require('lazy').setup({
       'rafamadriz/friendly-snippets',
     },
   },
-
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',   opts = {} },
   {
@@ -545,15 +544,14 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  clangd = {},
   jdtls = {},
   -- gopls = {},
   pylsp = {},
   arduino_language_server = {},
+  clangd = {},
   -- rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
-  r_language_server = { filetyoes = { 'R' } },
   cssls = {},
   lua_ls = {
     Lua = {
